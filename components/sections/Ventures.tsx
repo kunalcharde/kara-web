@@ -9,8 +9,9 @@ import { fadeUpView } from "@/lib/animations";
 
 export function Ventures() {
   return (
-    <section className="py-16 sm:py-24 relative bg-section-gradient" id="ventures">
-      <Container>
+    <section className="py-16 sm:py-24 relative bg-section-gradient overflow-hidden" id="ventures">
+      <div className="absolute inset-0 section-white-gradient pointer-events-none" aria-hidden />
+      <Container className="relative z-10">
         <motion.div
           initial={fadeUpView.initial}
           whileInView={fadeUpView.whileInView}

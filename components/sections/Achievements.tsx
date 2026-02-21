@@ -18,8 +18,9 @@ export function Achievements() {
   const cards = achievements.cards;
 
   return (
-    <section className="py-20 sm:py-28">
-      <Container>
+    <section className="py-20 sm:py-28 relative overflow-hidden">
+      <div className="absolute inset-0 section-white-gradient pointer-events-none" aria-hidden />
+      <Container className="relative z-10">
         <motion.div
           initial={fadeUpView.initial}
           whileInView={fadeUpView.whileInView}
@@ -51,8 +52,9 @@ export function Achievements() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-20px" }}
                 transition={{ duration: 0.5, delay: i * 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
+                className="h-full"
               >
-                <Card hover={false} className="text-center p-6 sm:p-8">
+                <Card hover={false} className="text-center p-6 sm:p-8 h-full flex flex-col items-center">
                   <span
                     className="inline-flex items-center justify-center w-14 h-14 rounded-full border-2 border-accent text-accent mb-4"
                     aria-hidden

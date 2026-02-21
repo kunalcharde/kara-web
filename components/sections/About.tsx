@@ -9,8 +9,9 @@ import { fadeUpView, staggerContainer, staggerItem } from "@/lib/animations";
 
 export function About() {
   return (
-    <section className="py-16 sm:py-24" id="about">
-      <Container className="relative">
+    <section className="py-16 sm:py-24 relative overflow-hidden" id="about">
+      <div className="absolute inset-0 section-white-gradient pointer-events-none" aria-hidden />
+      <Container className="relative z-10">
         <motion.div
           initial={fadeUpView.initial}
           whileInView={fadeUpView.whileInView}

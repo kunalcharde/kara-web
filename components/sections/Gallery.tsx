@@ -34,8 +34,9 @@ export function Gallery() {
   }, [lightboxIndex]);
 
   return (
-    <section className="py-20 sm:py-28">
-      <Container>
+    <section className="py-20 sm:py-28 relative overflow-hidden">
+      <div className="absolute inset-0 section-white-gradient pointer-events-none" aria-hidden />
+      <Container className="relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}

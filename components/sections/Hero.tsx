@@ -26,6 +26,7 @@ export function Hero() {
             "radial-gradient(ellipse 100% 60% at 50% 20%, rgba(58, 48, 120, 0.12) 0%, transparent 55%), radial-gradient(ellipse 70% 50% at 20% 70%, rgba(45, 91, 255, 0.08) 0%, transparent 50%), radial-gradient(ellipse 60% 50% at 85% 50%, rgba(138, 43, 226, 0.06) 0%, transparent 45%)",
         }}
       />
+      <div className="absolute inset-0 section-white-gradient pointer-events-none" aria-hidden />
       <Container className="relative z-10 pt-24 pb-20 flex-1 flex flex-col justify-center">
         <div className="max-w-3xl mx-auto text-center">
           <motion.p

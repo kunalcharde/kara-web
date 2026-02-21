@@ -39,8 +39,9 @@ const socialIcons: Record<string, (props: { className?: string }) => JSX.Element
 
 export function Contact() {
   return (
-    <section className="py-20 sm:py-28" id="contact">
-      <Container>
+    <section className="py-20 sm:py-28 relative overflow-hidden" id="contact">
+      <div className="absolute inset-0 section-white-gradient pointer-events-none" aria-hidden />
+      <Container className="relative z-10">
         <motion.div
           initial={fadeUpView.initial}
           whileInView={fadeUpView.whileInView}

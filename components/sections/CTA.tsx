@@ -1,10 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Rocket, Handshake, Users, MessageCircle, ArrowRight } from "lucide-react";
+import { Handshake, Users, MessageCircle, ArrowRight } from "lucide-react";
 import { cta } from "@/lib/data";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
+import { ClientIcon } from "@/components/ui/ClientIcon";
 import { fadeUpView } from "@/lib/animations";
 
 const cardIcons = [Handshake, Users, MessageCircle];
@@ -12,6 +13,7 @@ const cardIcons = [Handshake, Users, MessageCircle];
 export function CTA() {
   return (
     <section className="py-20 sm:py-28 relative bg-primary overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-b from-white/10 via-transparent to-transparent pointer-events-none dark:from-white/5" aria-hidden />
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/[0.03] dark:via-white/[0.03] to-transparent pointer-events-none" aria-hidden />
       <Container className="relative z-10">
         <motion.div
@@ -49,7 +51,7 @@ export function CTA() {
                   className="inline-flex items-center justify-center w-14 h-14 rounded-xl bg-white/15 border border-white/25 text-white mx-auto mb-4"
                   aria-hidden
                 >
-                  <IconComponent className="size-7" />
+                  <ClientIcon icon={IconComponent} className="size-7" aria-hidden />
                 </span>
                 <h3 className="font-serif text-xl font-semibold text-white mb-2">
                   {card.title}
@@ -63,7 +65,7 @@ export function CTA() {
                   className={`w-full sm:w-auto min-w-[140px] inline-flex items-center justify-center gap-1.5 font-sans ${!isFirst ? "text-white border-white/30 hover:bg-white/15" : ""}`}
                 >
                   {cta.buttonLabel}
-                  <ArrowRight className="size-4" aria-hidden />
+                  <ClientIcon icon={ArrowRight} className="size-4" aria-hidden />
                 </Button>
               </motion.div>
             );
