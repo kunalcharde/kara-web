@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Trophy, Globe, Award, Users, TrendingUp, LucideIcon } from "lucide-react";
+import { Globe, Award, Users, TrendingUp, LucideIcon } from "lucide-react";
 import { achievements } from "@/lib/data";
 import { Container } from "@/components/ui/Container";
 import { Card } from "@/components/ui/Card";
