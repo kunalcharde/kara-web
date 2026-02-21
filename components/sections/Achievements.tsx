@@ -6,6 +6,7 @@ import { achievements } from "@/lib/data";
 import { Container } from "@/components/ui/Container";
 import { Card } from "@/components/ui/Card";
 import { fadeUpView } from "@/lib/animations";
+import { SectionHeading } from "../ui/SectionHeading";
 
 const iconMap: Record<string, LucideIcon> = {
   globe: Globe,
@@ -28,15 +29,10 @@ export function Achievements() {
           transition={fadeUpView.transition}
           className="mb-14 text-center"
         >
-          <div className="flex items-center justify-center gap-2 mb-2">
-            <span className="text-accent font-sans text-sm font-medium uppercase tracking-wider">
-              {achievements.sectionLabel}
-            </span>
-          </div>
-          <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-semibold text-foreground">
-            {achievements.title}
-          </h2>
-   
+
+
+          <SectionHeading title={achievements.title} subtitle={achievements.sectionLabel} />
+
           <p className="text-muted font-sans mt-4 max-w-2xl mx-auto">
             {achievements.subtitle}
           </p>

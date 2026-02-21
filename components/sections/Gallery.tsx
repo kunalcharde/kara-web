@@ -51,7 +51,7 @@ export function Gallery() {
             <motion.button
               key={item.id}
               type="button"
-              className="relative aspect-[4/3] rounded-2xl overflow-hidden group focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-background"
+              className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-[var(--surface)] group focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-background"
               initial={{ opacity: 0, y: 20, scale: 0.98 }}
               whileInView={{ opacity: 1, y: 0, scale: 1 }}
               viewport={{ once: true, margin: "-20px" }}
@@ -64,7 +64,7 @@ export function Gallery() {
                 src={item.src}
                 alt={item.alt}
                 fill
-                className="object-cover rounded-2xl"
+                className="object-contain rounded-2xl"
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
               />
               <motion.div
@@ -118,20 +118,20 @@ export function Gallery() {
               &times;
             </button>
             <motion.div
-              className="relative max-w-4xl max-h-[85vh] w-full flex items-center justify-center"
+              className="relative w-full max-w-5xl h-[85vh] flex items-center justify-center px-2"
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
               onClick={(e) => e.stopPropagation()}
             >
               {gallery[lightboxIndex] && (
-                <div className="relative w-full h-full min-h-[200px] rounded-2xl overflow-hidden">
+                <div className="relative w-full h-full rounded-2xl overflow-hidden flex items-center justify-center">
                   <Image
                     src={gallery[lightboxIndex].src}
                     alt={gallery[lightboxIndex].alt}
                     fill
                     className="object-contain"
-                    sizes="(max-width: 896px) 100vw, 896px"
+                    sizes="(max-width: 1024px) 100vw, 1024px"
                   />
                 </div>
               )}
